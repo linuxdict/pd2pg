@@ -2,7 +2,7 @@ FROM alpine:latest
 
 WORKDIR '/apps'
 
-COPY ./pd2pg .
+COPY . .
 
 RUN apk update && apk add ruby ruby-dev postgresql-dev make git gcc build-base wget \
 && gem install -N json && gem install -N bigdecimal && gem build pd2pg.gemspec \
