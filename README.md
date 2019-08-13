@@ -14,6 +14,13 @@ It helps you:
 
 ## Installation
 ```
+# Docker installation  
+1. install postgresql / using docker 
+2. create database "pagerduty" in Postgresql
+3. docker pull liuedy/pd2pg
+4. docker run  --rm --env "PAGERDUTY_API_KEY=you_API key" --env "DATABASE_URL=postgres://postgres:youpass@you_pg_host:5432/pagerduty"  liuedy/pd2pg:latest /usr/bin/pd2pg
+
+# Manual installation 
 1. install postgresql / using docker 
 2. create database "pagerduty" in Postgresql
 3. apt-get install libpq-dev ruby2.3-dev
